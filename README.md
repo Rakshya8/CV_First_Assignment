@@ -1,185 +1,150 @@
-🦖 Webcam AR & Image Processing App
+# 🦖 Webcam AR & Image Processing App
 
-This is a Python application that lets you explore computer vision features using your webcam. It comes with multiple modes such as:
+This is a Python application that lets you explore computer vision features using your webcam.  
+It comes with multiple interactive modes:
 
-View Mode – plain webcam feed
+- **View Mode** – plain webcam feed  
+- **Geometric Transformations** – rotate, translate, scale the video  
+- **Color Conversion** – switch between RGB, grayscale, HSV  
+- **Brightness & Contrast** – adjust live  
+- **Histogram Visualization** – see pixel distributions  
+- **Gaussian & Bilateral Blur** – smoothing filters  
+- **Canny Edge Detection** – detect edges  
+- **Hough Line Detection** – detect straight lines  
+- **Panorama Mode** – stitch frames left to right  
+- **AR Mode** – Augmented Reality with ArUco markers + 3D dinosaur OBJ model 🦖  
+- **Camera Calibration** – use a chessboard pattern to calibrate your webcam  
+- **Undistort Mode** – correct lens distortion  
 
-Geometric Transformations – rotate, translate, scale the video
+This project is great for learning **OpenCV** and experimenting with **Augmented Reality**.
 
-Color Conversion – switch between RGB, grayscale, HSV
+---
 
-Brightness & Contrast – adjust live
+## 🔧 Requirements
 
-Histogram Visualization – see pixel distributions
+- **Python** 3.7, 3.8, or 3.9  
+  ⚠️ Do **not** use Python 3.10 or higher — OpenCV and some libraries may break.  
+- A **working webcam**  
+- A **terminal / command prompt** (Windows, macOS, or Linux)
 
-Gaussian & Bilateral Blur – smoothing filters
+---
 
-Canny Edge Detection – detect edges
+## 📥 Installation (Step by Step for Beginners)
 
-Hough Line Detection – detect straight lines
+### 1. Install Python
+- Go to [Python Downloads](https://www.python.org/downloads/).  
+- Download **Python 3.9.x** for your system.  
+- On Windows, during installation, check:  
+  ✅ **Add Python to PATH**  
 
-Panorama Mode – stitch frames left to right
-
-AR Mode – Augmented Reality with ArUco markers + 3D dinosaur OBJ model 🦖
-
-Camera Calibration – use a chessboard pattern to calibrate your webcam
-
-Undistort Mode – correct lens distortion
-
-This is great for learning OpenCV (a computer vision library) and experimenting with augmented reality.
-
-🔧 Requirements
-
-Python 3.7, 3.8, or 3.9
-⚠️ Do not use Python 3.10 or higher, as OpenCV and some libraries may break on certain systems.
-
-A working webcam
-
-A terminal / command prompt (built into Windows, macOS, Linux)
-
-📥 Installation (Step by Step for Beginners)
-1. Install Python
-
-Go to Python Downloads
-
-Choose Python 3.9.x for your system (Windows or macOS).
-
-During installation on Windows, check the box that says:
-
-"Add Python to PATH"
-
-After installation, open a terminal and check:
-
+Check installation:
+```bash
 python --version
+You should see something like:
 
-
-It should say something like:
-
+nginx
+Copy code
 Python 3.9.13
-
 2. Download the Project
+If you received a folder: put it on your Desktop (or anywhere easy).
 
-If you received this project as a folder:
+If using GitHub:
 
-Place it somewhere easy to find (e.g., Desktop).
-
-If you are using GitHub:
-
+bash
+Copy code
 git clone <your-repo-url>
 cd <your-repo-folder>
-
 3. Open a Terminal in the Project Folder
+Windows: Shift + Right Click inside folder → Open PowerShell here
 
-On Windows: Shift + Right Click inside the folder → "Open PowerShell window here"
+macOS/Linux:
 
-On macOS/Linux: Open Terminal, then type:
-
+bash
+Copy code
 cd path/to/your/project
-
 4. Create a Virtual Environment (Recommended)
+This keeps libraries separate for this project.
 
-This keeps project libraries separate.
-
+bash
+Copy code
 python -m venv venv
-
-
 Activate it:
 
 Windows (PowerShell):
 
+bash
+Copy code
 venv\Scripts\activate
-
-
 macOS/Linux:
 
+bash
+Copy code
 source venv/bin/activate
-
-
-You should now see (venv) at the start of your terminal line.
+You should now see (venv) in your terminal.
 
 5. Install Requirements
+Upgrade pip and install dependencies:
 
-Run:
-
+bash
+Copy code
 pip install --upgrade pip
 pip install -r requirements.txt
+This installs:
 
+opencv-python → computer vision
 
-This will install:
+numpy → math operations
 
-opencv-python → for computer vision
-
-numpy → for math operations
-
-And other needed libraries
+and other required packages
 
 6. Run the Application
-
-Now start the app:
-
+bash
+Copy code
 python app.py
-
-
-Your webcam window will open in fullscreen. 🎥
+Your webcam will open in fullscreen. 🎥
 
 📸 Assets Provided
-
-Inside the project there is an assets folder with useful images:
+Inside the project there is an assets folder:
 
 Calibration Chessboard → assets/calibrate.jpg
 
-Used for camera calibration (press K in the app).
+Used for camera calibration (press K).
 
-Print this out and hold it in front of your webcam so the program can capture calibration images.
+Print and hold in front of your webcam.
 
 ArUco Marker → assets/ar.jpg
 
-Used for Augmented Reality mode (press A in the app).
+Used for AR mode (press A).
 
-Print this out and place it in front of your webcam — the dinosaur 🦖 will appear on top of the marker.
+Print and place in front of your webcam — a 🦖 dinosaur will appear!
 
 🕹 Controls
+Key	Function
+ESC	Quit
+f	Toggle fullscreen
+v	View mode
+g	Geometric transforms
+c	Color modes (RGB/Gray/HSV)
+b	Brightness & Contrast
+h	Histogram
+i	Bilateral Filter
+e	Canny Edge Detection
+t	Hough Line Detection
+y	Panorama mode
+a	AR mode (3D dinosaur)
+k	Calibration (chessboard)
+u	Undistort preview
 
-ESC → quit
-
-f → toggle fullscreen
-
-v → View mode (plain webcam)
-
-g → Geometric transforms (rotate/translate/scale)
-
-c → Color modes (RGB, Gray, HSV)
-
-b → Brightness & Contrast
-
-h → Histogram
-
-i → Bilateral Filter
-
-e → Canny Edge Detection
-
-t → Hough Line Detection
-
-y → Panorama mode
-
-a → AR mode (3D dinosaur 🦖 on ArUco marker)
-
-k → Calibration (with chessboard)
-
-u → Undistort preview
-
-In Geometric mode:
-
-m → toggle rigid vs. similarity
+Geometric Mode
+m → toggle rigid vs similarity
 
 SPACE → auto-rotate
 
-a / d → rotate left/right
+a / d → rotate left / right
 
 0 → reset
 
-In Panorama mode:
-
+Panorama Mode
 n → add frame
 
 r → reset panorama
@@ -187,24 +152,24 @@ r → reset panorama
 s → save panorama
 
 🦖 Augmented Reality (AR Mode)
-
-Print the ArUco marker from assets/ar.jpg.
+Print the ArUco marker (assets/ar.jpg).
 
 Place it in front of your webcam.
 
-Press a to enter AR mode.
+Press A → AR mode starts.
 
-The green dinosaur OBJ model will appear sitting on the marker.
+A green dinosaur model appears on top of the marker!
 
 🎯 Tips for Beginners
-
 Don’t be scared of the terminal! You’ll only type a few commands.
 
-If something doesn’t work, copy the error message and search it online (or ask your teacher/mentor).
+If you get errors, copy them and search online (lots of OpenCV tutorials exist).
 
-This app is designed for learning computer vision step by step. Try each mode!
+Experiment with each mode to learn computer vision concepts.
 
 ✅ Summary of Commands
+bash
+Copy code
 # 1. Check Python version
 python --version
 
@@ -225,6 +190,4 @@ pip install -r requirements.txt
 
 # 6. Run the app
 python app.py
-
-
-✨ Now you’re ready to explore computer vision with your webcam!
+✨ You’re now ready to explore computer vision and augmented reality with your webcam! 🦖🎥
