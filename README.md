@@ -54,7 +54,7 @@ If using GitHub: <In your terminal>
 
 ```bash
 
-git clone <your-repo-url>
+git clone https://github.com/Rakshya8/CV_First_Assignment.git
 cd <your-repo-folder>
 ```
 
