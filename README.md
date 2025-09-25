@@ -37,86 +37,92 @@ This project is great for learning **OpenCV** and experimenting with **Augmented
 - On Windows, during installation, check:  
   ✅ **Add Python to PATH**  
 
-Check installation:
+### Check installation: <In your terminal>
 ```bash
 python --version
+```
+
 You should see something like:
 
-nginx
-Copy code
+```bash
 Python 3.9.13
-2. Download the Project
+```
+### 2. Download the Project
 If you received a folder: put it on your Desktop (or anywhere easy).
 
-If using GitHub:
+If using GitHub: <In your terminal>
 
-bash
-Copy code
+```bash
+
 git clone <your-repo-url>
 cd <your-repo-folder>
-3. Open a Terminal in the Project Folder
-Windows: Shift + Right Click inside folder → Open PowerShell here
+```
+
+### 3. Open a Terminal in the Project Folder
+Windows: Shift + Right Click inside folder → Open PowerShell/terminal here
 
 macOS/Linux:
 
-bash
-Copy code
+```bash
 cd path/to/your/project
-4. Create a Virtual Environment (Recommended)
+```
+
+### 4. Create a Virtual Environment (Recommended) <In your project>
 This keeps libraries separate for this project.
 
-bash
-Copy code
+```bash
 python -m venv venv
+```
 Activate it:
 
 Windows (PowerShell):
 
-bash
-Copy code
+```bash
 venv\Scripts\activate
+```
 macOS/Linux:
 
-bash
-Copy code
+```bash
 source venv/bin/activate
+```
 You should now see (venv) in your terminal.
 
-5. Install Requirements
-Upgrade pip and install dependencies:
+### 5. Install Requirements
+Upgrade pip and install dependencies: <In your terminal>
 
-bash
-Copy code
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 This installs:
 
-opencv-python → computer vision
+1. opencv-python → computer vision
 
-numpy → math operations
+2. numpy → math operations
 
-and other required packages
+3. and other required packages
 
-6. Run the Application
-bash
-Copy code
+### 6. Run the Application <In your terminal>
+```bash
 python app.py
-Your webcam will open in fullscreen. 🎥
+```
 
-📸 Assets Provided
+Note: Your webcam will open in fullscreen. 🎥
+
+#### 📸 Assets Provided
 Inside the project there is an assets folder:
 
-Calibration Chessboard → assets/calibrate.jpg
+***Calibration Chessboard*** → assets/calibrate.jpg
 
-Used for camera calibration (press K).
+1. Used for camera calibration (press K).
 
-Print and hold in front of your webcam.
+2. Print and hold in front of your webcam.
 
-ArUco Marker → assets/ar.jpg
+***ArUco Marker → assets/ar.jpg***
 
-Used for AR mode (press A).
+1. Used for AR mode (press A).
 
-Print and place in front of your webcam — a 🦖 dinosaur will appear!
+2. Print and place in front of your webcam — a 🦖 dinosaur will appear!
 
 🕹 Controls
 Key	Function
