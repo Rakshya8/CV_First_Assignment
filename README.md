@@ -22,8 +22,8 @@ This project is great for learning **OpenCV** and experimenting with **Augmented
 
 ## 🔧 Requirements
 
-- **Python** 3.7, 3.8, or 3.9  
-  ⚠️ Do **not** use Python 3.10 or higher — OpenCV and some libraries may break.  
+- **Python** < 3.10  
+  ⚠️ Do **not** use Python 3.9 or lower — OpenCV and some libraries may break.  
 - A **working webcam**  
 - A **terminal / command prompt** (Windows, macOS, or Linux)
 
@@ -33,7 +33,7 @@ This project is great for learning **OpenCV** and experimenting with **Augmented
 
 ### 1. Install Python
 - Go to [Python Downloads](https://www.python.org/downloads/).  
-- Download **Python 3.9.x** for your system.  
+- Download **Python 3.10.x** for your system.  
 - On Windows, during installation, check:  
   ✅ **Add Python to PATH**  
 
