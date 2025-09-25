@@ -124,47 +124,37 @@ Inside the project there is an assets folder:
 
 2. Print and place in front of your webcam — a 🦖 dinosaur will appear!
 
-🕹 Controls
-Key	Function
-ESC	Quit
-f	Toggle fullscreen
-v	View mode
-g	Geometric transforms
-c	Color modes (RGB/Gray/HSV)
-b	Brightness & Contrast
-h	Histogram
-i	Bilateral Filter
-e	Canny Edge Detection
-t	Hough Line Detection
-y	Panorama mode
-a	AR mode (3D dinosaur)
-k	Calibration (chessboard)
-u	Undistort preview
+***🕹 Controls***
+****Key	Function****
+1. ESC	Quit
+2. f	Toggle fullscreen
+3. v	View mode
+4. g	Geometric transforms
+5. c	Color modes (RGB/Gray/HSV)
+6. b	Brightness & Contrast
+7. h	Histogram
+8. i	Bilateral Filter
+9. e	Canny Edge Detection
+10. t	Hough Line Detection
+11. y	Panorama mode
+12. a	AR mode (3D dinosaur)
+13. k	Calibration (chessboard)
+14. u	Undistort preview
 
-Geometric Mode
-m → toggle rigid vs similarity
+1. Geometric Mode
+  1.1 m → toggle rigid vs similarity
+  1.2 SPACE → auto-rotate
+  1.3 a / d → rotate left / right
+  1.4 0 → reset
 
-SPACE → auto-rotate
+2. Panorama Mode
+  2.1 n → add frame
+  2.3 r → reset panorama
+  2.4 s → save panorama
 
-a / d → rotate left / right
-
-0 → reset
-
-Panorama Mode
-n → add frame
-
-r → reset panorama
-
-s → save panorama
-
-🦖 Augmented Reality (AR Mode)
-Print the ArUco marker (assets/ar.jpg).
-
-Place it in front of your webcam.
-
-Press A → AR mode starts.
-
-A green dinosaur model appears on top of the marker!
+3. 🦖 Augmented Reality (AR Mode)
+***Print the ArUco marker (assets/ar.jpg). Place it in front of your webcam. ***
+*** A green dinosaur model appears on top of the marker!***
 
 🎯 Tips for Beginners
 Don’t be scared of the terminal! You’ll only type a few commands.
@@ -174,8 +164,7 @@ If you get errors, copy them and search online (lots of OpenCV tutorials exist).
 Experiment with each mode to learn computer vision concepts.
 
 ✅ Summary of Commands
-bash
-Copy code
+``bash
 # 1. Check Python version
 python --version
 
@@ -196,4 +185,5 @@ pip install -r requirements.txt
 
 # 6. Run the app
 python app.py
+```
 ✨ You’re now ready to explore computer vision and augmented reality with your webcam! 🦖🎥
