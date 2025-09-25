@@ -852,7 +852,7 @@ def main():
                 "[G]eometric   [C]olor   [B]right/Contrast   [H]istogram   [K] Gaussian   [I] Bilateral   [T] Hough   [Y] Panorama   [A]R   [K] Calib   [U] Undistort   [V]iew   ESC: quit",
                 "Press '0' to reset (Lower=50, Upper=150, Aperture=3, L2Grad=0, PreBlur=1)   ·   'e' to exit"
             ])
-
+        
         elif mode == MODE_HOUGH:
             lower = get_trackbar_value('HLower', HOUGH_TRACKBARS)
             upper = get_trackbar_value('HUpper', HOUGH_TRACKBARS)
@@ -967,7 +967,8 @@ def main():
                 "Mode: Undistort (live)  |  'f' fullscreen",
                 "[V] View   [A] AR   [K] Calibrate"
             ])
-
+        
+            
         else:  # MODE_HIST
             mode_str = "gray" if hist_gray_only else "color"
             hist_canvas = make_hist_canvas(frame, mode=mode_str, log_scale=hist_log)
@@ -986,7 +987,6 @@ def main():
             draw_bottom_menu(display, [
                 f"Mode: Histogram · {'GRAY' if hist_gray_only else 'BGR'} {'(log)' if hist_log else ''}  |  'f' fullscreen",
                 "[G]eometric   [C]olor   [B]right/Contrast   [V]iew   [K] Gaussian   [I] Bilateral   [E] Canny   [T] Hough   [Y] Panorama   [A]R   [K] Calib   [U] Undistort   ESC: quit",
-                "1: BGR histogram   2: GRAY histogram   3/L: toggle log scale"
             ], origin=(20, 40))
 
         cv2.imshow(WINDOW_NAME, display)
@@ -1065,6 +1065,7 @@ def main():
                 setup_pano_ui(fullscreen=fullscreen); mode = MODE_PANO
             else:
                 destroy_window(); create_window(fullscreen=fullscreen); mode = MODE_VIEW
+        
 
         elif key == ord('a') and mode != MODE_GEOMETRIC:
             if mode != MODE_AR:
