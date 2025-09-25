@@ -578,7 +578,7 @@ def _draw_ar_wireframe(frame, detector_kind, detector, aruco_dict, params,
         R_marker, _ = cv2.Rodrigues(rvecs[i][0])
         R_final = R_marker @ R_align
         rvec_final, _ = cv2.Rodrigues(R_final)
-        scale_factor = 1.5   # adjust 1.0 = normal, >1 = bigger, <1 = smaller
+        scale_factor = 1   # adjust 1.0 = normal, >1 = bigger, <1 = smaller
         center = np.mean(model_vertices, axis=0)
         scaled_vertices = (model_vertices - center) * scale_factor + center
         pts, _ = cv2.projectPoints(scaled_vertices, rvec_final, tvecs[i][0], cam_mtx, dist)
