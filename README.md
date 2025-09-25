@@ -186,3 +186,7 @@ pip install -r requirements.txt
 python app.py
 ```
 ✨ You’re now ready to explore computer vision and augmented reality with your webcam! 🦖🎥
+
+### Video Demo
+
+https://drive.google.com/file/d/19NjL-L6fnONTNEmN_JfzycCE4kraG9mD/view?usp=sharing
