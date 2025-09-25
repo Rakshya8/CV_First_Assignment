@@ -153,8 +153,7 @@ Inside the project there is an assets folder:
   2.4 s → save panorama
 
 3. 🦖 Augmented Reality (AR Mode)
-***Print the ArUco marker (assets/ar.jpg). Place it in front of your webcam. ***
-*** A green dinosaur model appears on top of the marker!***
+***Print the ArUco marker (assets/ar.jpg). Place it in front of your webcam. A green dinosaur model appears on top of the marker!***
 
 🎯 Tips for Beginners
 Don’t be scared of the terminal! You’ll only type a few commands.
@@ -164,7 +163,7 @@ If you get errors, copy them and search online (lots of OpenCV tutorials exist).
 Experiment with each mode to learn computer vision concepts.
 
 ✅ Summary of Commands
-``bash
+```bash
 # 1. Check Python version
 python --version
 
